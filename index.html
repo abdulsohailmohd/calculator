@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calci</title>
+
+    <link href="https://fonts.googleapis.com/css?family=ZCOOL+KuaiLe" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="app.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.5/angular.js"></script>
+    <script src="app.js"></script>
+</head>
+
+<body ng-app="calci" ng-controller="CalciController">
+    <div class="base">
+        <!-- <div class="screen">{{screen}}</div> -->
+        <input type="text" class="screen" ng-model="screen">
+        <button ng-click="clear(true)" class="ac">AC</button>
+        <button ng-click="clear(false)" style="margin-left: 107px;" class="backspace">C</button>
+        <div>
+            <button ng-click="addToExpn(7)" class="number">7</button>
+            <button ng-click="addToExpn(8)" class="number">8</button>
+            <button ng-click="addToExpn(9)" class="number">9</button>
+            <button ng-click="addToExpn('+')" class="sign">+</button>
+        </div>
+        <div>
+            <button ng-click="addToExpn(4)" class="number">4</button>
+            <button ng-click="addToExpn(5)" class="number">5</button>
+            <button ng-click="addToExpn(6)" class="number">6</button>
+            <button ng-click="addToExpn('*')" class="sign">*</button>
+        </div>
+        <div>
+            <button ng-click="addToExpn(1)" class="number">1</button>
+            <button ng-click="addToExpn(2)" class="number">2</button>
+            <button ng-click="addToExpn(3)" class="number">3</button>
+            <button ng-click="addToExpn('-')" class="sign">-</button>
+        </div>
+        <div>
+            <button ng-click="addToExpn(0)" class="number">0</button>
+            <button ng-click="addToExpn('.')" class="number">.</button>
+            <button ng-click="addToExpn('=')" style="margin-left: 55px;" class="sign">=</button>
+        </div>
+
+    </div>
+</body>
+
+</html>
